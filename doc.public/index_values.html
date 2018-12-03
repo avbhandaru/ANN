@@ -1,0 +1,347 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Archive" rel="Chapter" href="Archive.html">
+<link title="Convolution" rel="Chapter" href="Convolution.html">
+<link title="Num" rel="Chapter" href="Num.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="Fstream" rel="Chapter" href="Fstream.html">
+<link title="Matrix" rel="Chapter" href="Matrix.html"><title>Index of values</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Index of values</h1>
+<table>
+<tr><td align="left"><div>A</div></td></tr>
+<tr><td><a href="Matrix.html#VALadd">add</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">add m1 m2</code> is the matrix addition of <code class="code">m1</code> and <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALappend_to_file">append_to_file</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">append_to_file fun name</code> takes in a function that specifies what to write to the file
+as well as a file name.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>B</div></td></tr>
+<tr><td><a href="Num.html#VALbin_pow">bin_pow</a> [<a href="Num.html">Num</a>]</td>
+<td></td></tr>
+<tr><td align="left"><div>C</div></td></tr>
+<tr><td><a href="Archive.html#VALcreate">create</a> [<a href="Archive.html">Archive</a>]</td>
+<td><div class="info">
+<p><code class="code">create ~name files</code> creates an archive containing all names in <code class="code">files</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>D</div></td></tr>
+<tr><td><a href="Matrix.html#VALdet">det</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">det m</code> is the determinant of <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALdot">dot</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">dot m1 m2</code> takes the dot product of matrix <code class="code">m1</code> and matrix <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALdrop_col">drop_col</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">drop_col m j</code> removes the <code class="code">j</code>th column of <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALdrop_row">drop_row</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">drop_row m i</code> removes the <code class="code">i</code>th row of <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>E</div></td></tr>
+<tr><td><a href="Matrix.html#VALentries">entries</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">entries t</code> returns the number of entries in matrix t</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALequals">equals</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">equals m1 m2</code> is true if <code class="code">m1</code> is the same (structurally and same values) as
+    <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>F</div></td></tr>
+<tr><td><a href="Fstream.html#VALfilter">filter</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">filter ~f s</code> is a stream with only the elements
+    that match the predicate <code class="code">f</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALfold_left">fold_left</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">fold_left fun acc t</code> returns the result of a fold_left function with 
+    anonymous function fun and initial accumulator acc applied to matrix t</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALfold_left">fold_left</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">fold_left ~acc ~init s</code> folds left over the stream
+    and produces a value with the same type as <code class="code">init</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALformat">format</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">format fmt t</code> prints out <code class="code">t</code> to <code class="code">fmt</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALfrom">from</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">from ~f</code> constructs an fstream out of a function
+    that takes unit and returns an option.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALfrom_channel">from_channel</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">from_channel ch</code> constructs a <code class="code">string Fstream.t</code>
+    from the channel <code class="code">ch</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALfrom_file">from_file</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">from_channel fn</code> constructs a <code class="code">string Fstream.t</code>
+    from the file <code class="code">fn</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>G</div></td></tr>
+<tr><td><a href="Matrix.html#VALget_first_n">get_first_n</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">get_first_n m n</code> returns a touple with the first n elements of matrix m 
+    along with the rest of matrix m</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>H</div></td></tr>
+<tr><td><a href="Matrix.html#VALheight">height</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">height a</code> where <code class="code">a</code> is an <code class="code">m x n</code> matrix is <code class="code">m</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Authors.html#VALhours_worked">hours_worked</a> [<a href="Authors.html">Authors</a>]</td>
+<td></td></tr>
+<tr><td align="left"><div>I</div></td></tr>
+<tr><td><a href="Matrix.html#VALinv">inv</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">inv m</code> is <code class="code">Some i</code> if <code class="code">m</code> is invertable and <code class="code">None</code> otherwise.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALiter">iter</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">iter f m</code> applies <code class="code">f</code> to every element in <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>M</div></td></tr>
+<tr><td><a href="Matrix.html#VALmap">map</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">map f m</code> is the map for <code class="code">f</code> on <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Fstream.html#VALmap">map</a> [<a href="Fstream.html">Fstream</a>]</td>
+<td><div class="info">
+<p><code class="code">map ~f s</code> is a new stream with <code class="code">f</code> applied
+    to every element of the stream.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALmap2">map2</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">map2 f m1 m2</code> is a matrix <code class="code">m</code> where every <code class="code">i, j</code> in <code class="code">m</code> is equal to
+    <code class="code">f m1_i m2_i, f m1_j m2_j</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALmat_values">mat_values</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">mat_values m n v</code> is a matrix full of float <code class="code">v</code> of size <code class="code">m x n</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALmult">mult</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">mult m1 m2</code> is the matrix multiplication of <code class="code">m1</code> and <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALmult_">mult_</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td></td></tr>
+<tr><td align="left"><div>N</div></td></tr>
+<tr><td><a href="Matrix.html#VALnorm">norm</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">norm m</code> is the norm of <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>O</div></td></tr>
+<tr><td><a href="Matrix.html#VALof_list">of_list</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">of_list l</code> is a matrix representation of <code class="code">l</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALones">ones</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">ones ~m ~n</code> is a matrix full of ones of size <code class="code">m x n</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>P</div></td></tr>
+<tr><td><a href="Num.html#VALpow">pow</a> [<a href="Num.html">Num</a>]</td>
+<td></td></tr>
+<tr><td><a href="Matrix.html#VALprint">print</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">format t</code> prints <code class="code">t</code> to <code class="code">stdout</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>Q</div></td></tr>
+<tr><td><a href="Matrix.html#VALquad_conn">quad_conn</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td></td></tr>
+<tr><td><a href="Matrix.html#VALquad_split">quad_split</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td></td></tr>
+<tr><td align="left"><div>R</div></td></tr>
+<tr><td><a href="Matrix.html#VALrandom">random</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">random ~m ~n</code> is a matrix full of random floats of size <code class="code">m x n</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Archive.html#VALread">read</a> [<a href="Archive.html">Archive</a>]</td>
+<td><div class="info">
+<p><code class="code">read ~name</code> reads the archive <code class="code">name</code> and returns the list of files within it.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALreturn">return</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">return to</code> takes <code class="code">t</code> out of the option if possible, raising
+    an exception otherwise.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>S</div></td></tr>
+<tr><td><a href="Matrix.html#VALscalar_mult">scalar_mult</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">scalar_mult m x</code> is the scalar multiplication of <code class="code">m</code> and <code class="code">x</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALsep">sep</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">sep m</code> separates the augmented matrix <code class="code">a | m</code> into <code class="code">(a, m)</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALset">set</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">set m v ~i ~j</code> replaces cell <code class="code">i, j</code> with value <code class="code">v</code> in matrix <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALsize">size</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">size m</code> returns the length of the outer array of matrix m.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALsize_equals">size_equals</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">width m1 m2</code> is <code class="code">true</code> if m1 has the same dimensions as <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALslice">slice</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">slice m p1 p2</code> is a sub-section of <code class="code">m</code> between <code class="code">p1</code> and <code class="code">p2</code></p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALsquare">square</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td></td></tr>
+<tr><td><a href="Matrix.html#VALsub">sub</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">sub m1 m2</code> is the matrix subtraction of <code class="code">m1</code> and <code class="code">m2</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALsum">sum</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">sum m1</code> is the sum of every element in <code class="code">m1</code></p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>T</div></td></tr>
+<tr><td><a href="Matrix.html#VALto_flat_list">to_flat_list</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">to_flat_list t</code> returns a representation of matrix t as a flattened list of floats</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALto_matrix">to_matrix</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">to_matrix b</code> takes in an array of arrays of strings and converts it to a 
+    matris of the floats that are contained in each string</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALto_row_list">to_row_list</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">to_row_list m</code> is a list of each row in matrix <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td><a href="Matrix.html#VALtranspose">transpose</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">transpose m</code> is the transpose of matrix <code class="code">m</code>.</p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>W</div></td></tr>
+<tr><td><a href="Matrix.html#VALwidth">width</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">width a</code> where <code class="code">a</code> is an <code class="code">m x n</code> matrix is <code class="code">n</code></p>
+
+</div>
+</td></tr>
+<tr><td align="left"><div>Z</div></td></tr>
+<tr><td><a href="Matrix.html#VALzeros">zeros</a> [<a href="Matrix.html">Matrix</a>]</td>
+<td><div class="info">
+<p><code class="code">zeros ~m ~n</code> is a matrix full of zeros of size <code class="code">m x n</code>.</p>
+
+</div>
+</td></tr>
+</table>
+</body>
+</html>

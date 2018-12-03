@@ -1,0 +1,25 @@
+Clflags.include_dirs :=
+  [ "/Users/avbhanda/.opam/4.06.1/lib/bisect_ppx/runtime"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/bytes"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/camomile"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/camomile/default_config"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/camomile/dyn"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/camomile/lib_default"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/camomile/library"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/findlib"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lambda-term"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lwt"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lwt/unix"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lwt_log"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lwt_log/core"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/lwt_react"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/ocaml/compiler-libs"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/ocaml/threads"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/react"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/result"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/utop"
+  ; "/Users/avbhanda/.opam/4.06.1/lib/zed"
+  ; "/Users/avbhanda/Desktop/CS3110/Projects/A6ANN/_build/default/lib/.ann.objs"
+  ];
+
+UTop_main.main ();

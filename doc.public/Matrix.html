@@ -1,0 +1,281 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Fstream.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Archive" rel="Chapter" href="Archive.html">
+<link title="Convolution" rel="Chapter" href="Convolution.html">
+<link title="Num" rel="Chapter" href="Num.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="Fstream" rel="Chapter" href="Fstream.html">
+<link title="Matrix" rel="Chapter" href="Matrix.html"><title>Matrix</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Fstream.html" title="Fstream">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;</div>
+<h1>Module <a href="type_Matrix.html">Matrix</a></h1>
+
+<pre><span id="MODULEMatrix"><span class="keyword">module</span> Matrix</span>: <code class="code">sig</code> <a href="Matrix.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>Type of matrix</p>
+</div>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type"></code>t</span> </pre>
+
+
+<pre><span id="VALzeros"><span class="keyword">val</span> zeros</span> : <code class="type">m:int -> n:int -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">zeros ~m ~n</code> is a matrix full of zeros of size <code class="code">m x n</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALones"><span class="keyword">val</span> ones</span> : <code class="type">m:int -> n:int -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">ones ~m ~n</code> is a matrix full of ones of size <code class="code">m x n</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALrandom"><span class="keyword">val</span> random</span> : <code class="type">m:int -> n:int -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">random ~m ~n</code> is a matrix full of random floats of size <code class="code">m x n</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALof_list"><span class="keyword">val</span> of_list</span> : <code class="type">float list list -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">of_list l</code> is a matrix representation of <code class="code">l</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALto_row_list"><span class="keyword">val</span> to_row_list</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> list</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">to_row_list m</code> is a list of each row in matrix <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALmat_values"><span class="keyword">val</span> mat_values</span> : <code class="type">m:int -> n:int -> v:float -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">mat_values m n v</code> is a matrix full of float <code class="code">v</code> of size <code class="code">m x n</code></p>
+</div>
+</div>
+
+<pre><span id="VALequals"><span class="keyword">val</span> equals</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">equals m1 m2</code> is true if <code class="code">m1</code> is the same (structurally and same values) as
+    <code class="code">m2</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsep"><span class="keyword">val</span> sep</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">sep m</code> separates the augmented matrix <code class="code">a | m</code> into <code class="code">(a, m)</code></p>
+</div>
+</div>
+
+<pre><span id="VALreturn"><span class="keyword">val</span> return</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> option -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">return to</code> takes <code class="code">t</code> out of the option if possible, raising
+    an exception otherwise.</p>
+</div>
+</div>
+
+<pre><span id="VALfold_left"><span class="keyword">val</span> fold_left</span> : <code class="type">('a -> float -> 'a) -> 'a -> <a href="Matrix.html#TYPEt">t</a> -> 'a</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">fold_left fun acc t</code> returns the result of a fold_left function with 
+    anonymous function fun and initial accumulator acc applied to matrix t</p>
+</div>
+</div>
+
+<pre><span id="VALset"><span class="keyword">val</span> set</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float -> i:int -> j:int -> <a href="Matrix.html#TYPEt">t</a> option</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">set m v ~i ~j</code> replaces cell <code class="code">i, j</code> with value <code class="code">v</code> in matrix <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALheight"><span class="keyword">val</span> height</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">height a</code> where <code class="code">a</code> is an <code class="code">m x n</code> matrix is <code class="code">m</code></p>
+</div>
+</div>
+
+<pre><span id="VALwidth"><span class="keyword">val</span> width</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">width a</code> where <code class="code">a</code> is an <code class="code">m x n</code> matrix is <code class="code">n</code></p>
+</div>
+</div>
+
+<pre><span id="VALentries"><span class="keyword">val</span> entries</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">entries t</code> returns the number of entries in matrix t</p>
+</div>
+</div>
+
+<pre><span id="VALsize_equals"><span class="keyword">val</span> size_equals</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> bool</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">width m1 m2</code> is <code class="code">true</code> if m1 has the same dimensions as <code class="code">m2</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">(float -> float) -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">map f m</code> is the map for <code class="code">f</code> on <code class="code">m</code>.
+   Requires: <code class="code">m</code> is an m x 1 matrix where m is the number of nodes in the layer</p>
+</div>
+</div>
+
+<pre><span id="VALmap2"><span class="keyword">val</span> map2</span> : <code class="type">(float -> float -> float) -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> option</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">map2 f m1 m2</code> is a matrix <code class="code">m</code> where every <code class="code">i, j</code> in <code class="code">m</code> is equal to
+    <code class="code">f m1_i m2_i, f m1_j m2_j</code></p>
+</div>
+</div>
+
+<pre><span id="VALiter"><span class="keyword">val</span> iter</span> : <code class="type">(float -> unit) -> <a href="Matrix.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">iter f m</code> applies <code class="code">f</code> to every element in <code class="code">m</code>. <code class="code">f</code> needs to return <code class="code">unit</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsum"><span class="keyword">val</span> sum</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">sum m1</code> is the sum of every element in <code class="code">m1</code></p>
+</div>
+</div>
+
+<pre><span id="VALadd"><span class="keyword">val</span> add</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> option</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">add m1 m2</code> is the matrix addition of <code class="code">m1</code> and <code class="code">m2</code>.
+    <code class="code">m1</code> must be the same size as <code class="code">m2</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsub"><span class="keyword">val</span> sub</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> option</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">sub m1 m2</code> is the matrix subtraction of <code class="code">m1</code> and <code class="code">m2</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsquare"><span class="keyword">val</span> square</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int -> <a href="Matrix.html#TYPEt">t</a></code></pre>
+<pre><span id="VALquad_split"><span class="keyword">val</span> quad_split</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a></code></pre>
+<pre><span id="VALquad_conn"><span class="keyword">val</span> quad_conn</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre>
+<pre><span id="VALmult"><span class="keyword">val</span> mult</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">mult m1 m2</code> is the matrix multiplication of <code class="code">m1</code> and <code class="code">m2</code>.
+    Raises: Failure "Bad Dimensions" if the dimensions of <code class="code">m1</code> and <code class="code">m2</code> are not correct</p>
+</div>
+</div>
+
+<pre><span id="VALmult_"><span class="keyword">val</span> mult_</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre>
+<pre><span id="VALdot"><span class="keyword">val</span> dot</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">dot m1 m2</code> takes the dot product of matrix <code class="code">m1</code> and matrix <code class="code">m2</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsquare"><span class="keyword">val</span> square</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">square m n</code> takes matrix m and extends its size until its dimensions are 
+    n x n, therefore square. m must be greater than or equal to m. Otherwise the
+    slice function can be used.</p>
+</div>
+</div>
+
+<pre><span id="VALscalar_mult"><span class="keyword">val</span> scalar_mult</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">scalar_mult m x</code> is the scalar multiplication of <code class="code">m</code> and <code class="code">x</code>.</p>
+</div>
+</div>
+<p><code class="code">map m f</code> is the map for <code class="code">f</code> on <code class="code">m</code>.
+   Requires: <code class="code">m</code> is an m x 1 matrix where m is the number of nodes in the layer</p>
+
+<pre><span id="VALslice"><span class="keyword">val</span> slice</span> : <code class="type">int * int -> int * int -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">slice m p1 p2</code> is a sub-section of <code class="code">m</code> between <code class="code">p1</code> and <code class="code">p2</code></p>
+</div>
+</div>
+
+<pre><span id="VALinv"><span class="keyword">val</span> inv</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a> option</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">inv m</code> is <code class="code">Some i</code> if <code class="code">m</code> is invertable and <code class="code">None</code> otherwise.</p>
+</div>
+</div>
+
+<pre><span id="VALdet"><span class="keyword">val</span> det</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">det m</code> is the determinant of <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALnorm"><span class="keyword">val</span> norm</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">norm m</code> is the norm of <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALtranspose"><span class="keyword">val</span> transpose</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">transpose m</code> is the transpose of matrix <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALdrop_row"><span class="keyword">val</span> drop_row</span> : <code class="type">int -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">drop_row m i</code> removes the <code class="code">i</code>th row of <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALdrop_col"><span class="keyword">val</span> drop_col</span> : <code class="type">int -> <a href="Matrix.html#TYPEt">t</a> -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">drop_col m j</code> removes the <code class="code">j</code>th column of <code class="code">m</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALto_matrix"><span class="keyword">val</span> to_matrix</span> : <code class="type">string array array -> <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">to_matrix b</code> takes in an array of arrays of strings and converts it to a 
+    matris of the floats that are contained in each string</p>
+</div>
+</div>
+
+<pre><span id="VALprint"><span class="keyword">val</span> print</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">format t</code> prints <code class="code">t</code> to <code class="code">stdout</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALformat"><span class="keyword">val</span> format</span> : <code class="type">Format.formatter -> <a href="Matrix.html#TYPEt">t</a> -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">format fmt t</code> prints out <code class="code">t</code> to <code class="code">fmt</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALsize"><span class="keyword">val</span> size</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">size m</code> returns the length of the outer array of matrix m.</p>
+</div>
+</div>
+
+<pre><span id="VALget_first_n"><span class="keyword">val</span> get_first_n</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> int -> <a href="Matrix.html#TYPEt">t</a> * <a href="Matrix.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">get_first_n m n</code> returns a touple with the first n elements of matrix m 
+    along with the rest of matrix m</p>
+</div>
+</div>
+
+<pre><span id="VALto_flat_list"><span class="keyword">val</span> to_flat_list</span> : <code class="type"><a href="Matrix.html#TYPEt">t</a> -> float list</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">to_flat_list t</code> returns a representation of matrix t as a flattened list of floats</p>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="next" href="Convolution.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Archive" rel="Chapter" href="Archive.html">
+<link title="Convolution" rel="Chapter" href="Convolution.html">
+<link title="Num" rel="Chapter" href="Num.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="Fstream" rel="Chapter" href="Fstream.html">
+<link title="Matrix" rel="Chapter" href="Matrix.html"><title>Archive</title>
+</head>
+<body>
+<div class="navbar">&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Convolution.html" title="Convolution">Next</a>
+</div>
+<h1>Module <a href="type_Archive.html">Archive</a></h1>
+
+<pre><span id="MODULEArchive"><span class="keyword">module</span> Archive</span>: <code class="code">sig</code> <a href="Archive.html">..</a> <code class="code">end</code></pre><hr width="100%">
+
+<pre><span id="TYPEfilename"><span class="keyword">type</span> <code class="type"></code>filename</span> = <code class="type">string</code> </pre>
+
+
+<pre><span id="EXCEPTIONFile_not_found"><span class="keyword">exception</span> File_not_found</span> <span class="keyword">of</span> <code class="type">string</code></pre>
+
+<pre><span id="VALcreate"><span class="keyword">val</span> create</span> : <code class="type">name:<a href="Archive.html#TYPEfilename">filename</a> -> ?destructive:bool -> <a href="Archive.html#TYPEfilename">filename</a> list -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">create ~name files</code> creates an archive containing all names in <code class="code">files</code>.
+    Raises <code class="code">File_not_found</code> if any of the files does not exist.</p>
+</div>
+</div>
+
+<pre><span id="VALread"><span class="keyword">val</span> read</span> : <code class="type"><a href="Archive.html#TYPEfilename">filename</a> -> f:(<a href="Archive.html#TYPEfilename">filename</a> -> 'a) -> 'a list</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">read ~name</code> reads the archive <code class="code">name</code> and returns the list of files within it.</p>
+</div>
+</div>
+</body></html>

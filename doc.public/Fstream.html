@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rel="stylesheet" href="style.css" type="text/css">
+<meta content="text/html; charset=iso-8859-1" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="Start" href="index.html">
+<link rel="previous" href="Authors.html">
+<link rel="next" href="Matrix.html">
+<link rel="Up" href="index.html">
+<link title="Index of types" rel=Appendix href="index_types.html">
+<link title="Index of exceptions" rel=Appendix href="index_exceptions.html">
+<link title="Index of values" rel=Appendix href="index_values.html">
+<link title="Index of modules" rel=Appendix href="index_modules.html">
+<link title="Archive" rel="Chapter" href="Archive.html">
+<link title="Convolution" rel="Chapter" href="Convolution.html">
+<link title="Num" rel="Chapter" href="Num.html">
+<link title="Authors" rel="Chapter" href="Authors.html">
+<link title="Fstream" rel="Chapter" href="Fstream.html">
+<link title="Matrix" rel="Chapter" href="Matrix.html"><title>Fstream</title>
+</head>
+<body>
+<div class="navbar"><a class="pre" href="Authors.html" title="Authors">Previous</a>
+&nbsp;<a class="up" href="index.html" title="Index">Up</a>
+&nbsp;<a class="post" href="Matrix.html" title="Matrix">Next</a>
+</div>
+<h1>Module <a href="type_Fstream.html">Fstream</a></h1>
+
+<pre><span id="MODULEFstream"><span class="keyword">module</span> Fstream</span>: <code class="code">sig</code> <a href="Fstream.html">..</a> <code class="code">end</code></pre><div class="info module top">
+<div class="info-desc">
+<p>A <code class="code">Fstream</code> represents a potentially finite stream.</p>
+</div>
+</div>
+<hr width="100%">
+
+<pre><span id="TYPEt"><span class="keyword">type</span> <code class="type">'a</code> t</span> </pre>
+<div class="info ">
+<div class="info-desc">
+<p>The type of an finite stream.</p>
+</div>
+</div>
+
+
+<pre><span id="VALfrom"><span class="keyword">val</span> from</span> : <code class="type">f:(unit -> 'a option) -> 'a <a href="Fstream.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">from ~f</code> constructs an fstream out of a function
+    that takes unit and returns an option. The stream
+    ends when this function returns <code class="code">None</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALfrom_channel"><span class="keyword">val</span> from_channel</span> : <code class="type">Pervasives.in_channel -> string <a href="Fstream.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">from_channel ch</code> constructs a <code class="code">string Fstream.t</code>
+    from the channel <code class="code">ch</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALfrom_file"><span class="keyword">val</span> from_file</span> : <code class="type">string -> string <a href="Fstream.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">from_channel fn</code> constructs a <code class="code">string Fstream.t</code>
+    from the file <code class="code">fn</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALmap"><span class="keyword">val</span> map</span> : <code class="type">f:('a -> 'b) -> 'a <a href="Fstream.html#TYPEt">t</a> -> 'b <a href="Fstream.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">map ~f s</code> is a new stream with <code class="code">f</code> applied
+    to every element of the stream.</p>
+</div>
+</div>
+
+<pre><span id="VALfilter"><span class="keyword">val</span> filter</span> : <code class="type">f:('a -> bool) -> 'a <a href="Fstream.html#TYPEt">t</a> -> 'a <a href="Fstream.html#TYPEt">t</a></code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">filter ~f s</code> is a stream with only the elements
+    that match the predicate <code class="code">f</code>.</p>
+</div>
+</div>
+
+<pre><span id="VALfold_left"><span class="keyword">val</span> fold_left</span> : <code class="type">f:('acc -> 'a -> 'acc) -> init:'acc -> 'a <a href="Fstream.html#TYPEt">t</a> -> 'acc</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">fold_left ~acc ~init s</code> folds left over the stream
+    and produces a value with the same type as <code class="code">init</code>.
+    This works the same as fold_left over lists. If <code class="code">s</code>
+    doesn't end, this function will not terminate.</p>
+</div>
+</div>
+
+<pre><span id="VALappend_to_file"><span class="keyword">val</span> append_to_file</span> : <code class="type">f:(Pervasives.out_channel -> unit) -> string -> unit</code></pre><div class="info ">
+<div class="info-desc">
+<p><code class="code">append_to_file fun name</code> takes in a function that specifies what to write to the file
+as well as a file name. The inputted function writes to the end of the specified file</p>
+</div>
+</div>
+</body></html>
